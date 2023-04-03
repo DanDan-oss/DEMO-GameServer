@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Head">
+      <UniqueIdentifier>{5cee6886-683f-4a22-a705-60fb5f791c64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{23f98c75-7d8d-4ae0-a2d5-76c946743848}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源">
+      <UniqueIdentifier>{cffa72b5-ca3e-438e-a29e-2b2c90040760}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="GameNetwork.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="GameProtocol.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="GameMSG.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="GameRole.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="GameWorld.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="ZinxTimer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="msg.pb.cc">
+      <Filter>资源</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GameNetwork.h">
+      <Filter>Head</Filter>
+    </ClInclude>
+    <ClInclude Include="GameProtocol.h">
+      <Filter>Head</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMSG.h">
+      <Filter>Head</Filter>
+    </ClInclude>
+    <ClInclude Include="GameRole.h">
+      <Filter>Head</Filter>
+    </ClInclude>
+    <ClInclude Include="GameWorld.h">
+      <Filter>Head</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>Head</Filter>
+    </ClInclude>
+    <ClInclude Include="msg.pb.h">
+      <Filter>资源</Filter>
+    </ClInclude>
+    <ClInclude Include="ZinxTimer.h">
+      <Filter>资源</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="msg.proto">
+      <Filter>Head</Filter>
+    </None>
+  </ItemGroup>
+</Project>

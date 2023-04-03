@@ -1,0 +1,54 @@
+syntax="proto3";
+package pb;		// 命名空间
+
+// 开关选项,用于客户端
+option csharp_namespace = "Pb";
+
+message SyncPid{
+	int32 PlayID=1;
+	string Username=2;
+}
+
+message Position{
+	float posX=1;
+	float posY=2;
+	float posZ=3;	// 游戏世界的用的是y是用z来表示,y表示高度, 客户端写法已生成,没办法改变
+	float posV=4;
+	int32 BloodValue=5;	/* 血量,预留*/
+}
+
+message Player{	
+	int32 PlayID=1;			//玩家id
+	Position pos=2;			// 坐标
+	string Username=3;		// 玩家名称
+}
+
+message SyncPlayers{
+	/* 嵌套多个子消息类型Player玩家的消息。数组*/
+	repeated Player ps=1;
+}
+
+
+
+/* 移动位置消息 */
+message MovePackege{
+	Position pos=1;
+	int32 ActionData=2;
+}
+
+/* 向外发送的广播请求 */
+message BroadCast{
+	int32 PlayID=1;
+	int32 Type=2;
+	/*根据TP不同,BroadCast消息会包含聊天内容(Content) 或初始位置(pos)或新位置(pos)*/
+	oneof data{
+		string Content=3;
+		Position pos=4;
+		int32 ActionData=5;		/* ActionData暂时预留*/
+	}
+	string Username=6;
+}
+
+message Talk{
+	string Content=1;
+}
